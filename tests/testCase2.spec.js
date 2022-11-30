@@ -1,14 +1,10 @@
 const { test, expect } = require('@playwright/test');
-const { SearchInputPage} = require('./testCase2.page');
-import * as generateString from './helperGeneCode'
+const { SearchInputPage} = require('../page_objects/search.page');
 
 
-test('Enter  not valid information in the "Search" input', async ({ page }) => {
+
+test('ID 2 To test the negative "Search" input scenario ', async ({ page }) => {
   const searchInputPage = new SearchInputPage(page);
-  await searchInputPage.goto();
-  await searchInputPage.searchLink.click();
-  await searchInputPage.serchInput.fill(generateString.generateString(10));
-  await await searchInputPage.submitButton.click();
-  await expect(searchInputPage.messegeResultsCount).toHaveText('Results (0)'
-    );
+  await searchInputPage.inputInSearch();
+  await expect(searchInputPage.messegeResultsCount).toHaveText('Results (0)');
 });

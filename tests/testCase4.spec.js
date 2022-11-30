@@ -1,12 +1,9 @@
 const { test, expect } = require('@playwright/test');
-const {CheckSearchInputIsFocused} = require('./testCase4.page');
+const {CheckSearchInputIsFocused} = require('../page_objects/focusSearch');
 
 
-test('Search input is focused after a click', async ({ page }) => {
+test('ID 4 To test focus in Search input after a click', async ({ page }) => {
   const checkSearchInputIsFocused = new CheckSearchInputIsFocused(page);
-  await checkSearchInputIsFocused.goto();
-  await checkSearchInputIsFocused.searchInput.click();
+  await checkSearchInputIsFocused.focusedSearchInput();
   await expect(checkSearchInputIsFocused.searchInput).toBeFocused();
-
-  
 });
