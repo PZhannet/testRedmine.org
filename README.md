@@ -1,12 +1,12 @@
 ## Project description. 
 
     Test different functionality for  https://www.redmine.org/
+
     It allows testing Chromium, Firefox and WebKit with a single API
 
 ## Project set up
     
-    To clone progect 
-    git clone https://github.com/PZhannet/testRedmine.org
+    To clone progect:  git clone https://github.com/PZhannet/testRedmine.org
 
 ## Running Tests
 
@@ -31,7 +31,11 @@
 
 ## Line reporter
 
-    Line uses a single line to report the last finished test, and prints failures when they occur. Line reporter is useful for large test suites where it shows the progress but does not spam the output by listing all the tests. Its runs automatically during test running.
+    Line uses a single line to report the last finished test, and prints failures when they occur. 
+
+    Line reporter is useful for large test suites where it shows the progress but does not spam the output by listing all the tests. 
+    
+    Its runs automatically during test running.
 
 ##  Technologies
 
