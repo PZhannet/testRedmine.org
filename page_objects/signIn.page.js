@@ -1,11 +1,6 @@
-
 const { expect } = require('@playwright/test');
 const { OpenRedminePage } = require('./openRedmine.page');
-import * as generateString from '../helper/helperGeneCode'
-
-
 exports.EmailInputPage = class EmailInputPage extends OpenRedminePage {
-
   /**
    * @param {import('@playwright/test').Page} page
    */
@@ -20,33 +15,22 @@ exports.EmailInputPage = class EmailInputPage extends OpenRedminePage {
     this.gettingLoginForm = page.locator('#login-form')
     this.gettingLostPasswordHeader = page.locator('div>h2')
   }
-
   async clickSignInLink(){
+    await this.goto();
     await this.signInLink.first().click();
     await expect(this.gettingLoginForm).toBeVisible();
   }
-
-  async clicklostPasswordLink(){
+  async clickLostPasswordLink(){
     await this.lostPasswordLink.first().click();
     await expect(this.gettingLostPasswordHeader).toHaveText('Lost password')
   }
-
-  async inputEmail(){
-    await this.emailInput.fill(generateString.generateString(5)+'@gmail.com');
+  async inputEmail(email){
+    await this.emailInput.fill(email);
     await expect(this.emailInput).not.toBeEmpty();
   }
-
   async clickSubmitButton(){
     await this.submitButton.first().click();
     await expect(this.emailInput).toBeEmpty();
-  }
-
-  async signIn (){
-    await this.goto();
-    await this.clickSignInLink();
-    await this.clicklostPasswordLink();
-    await this.inputEmail();
-    await this.clickSubmitButton();
   }
 }
 

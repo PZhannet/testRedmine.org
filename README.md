@@ -1,59 +1,42 @@
 ## Project description. 
 
     Test different functionality for  https://www.redmine.org/
-
-
-## Projects
-
     It allows testing Chromium, Firefox and WebKit with a single API
 
 ## Project set up
-    Pre-Requisites: 
-
-    Install Visual Studio Code: Download and Install Visual Studio Code(VSCode).
-    Install NodeJS: Download and Install Node JS
-
-    Installation Playwright:
-
-    Run the install command in Terminal VSCode
-
-    npm init playwright@latest
-    
-    and select the following to get started:
-
-    Choose JavaScript 
-    Name of your Tests folder 
-    Add a GitHub Actions workflow to easily run tests on CI
     
     To clone progect 
     git clone https://github.com/PZhannet/testRedmine.org
 
 ## Running Tests
 
-    Running all tests:   npx test
+    Running all tests:   npx playwright test
 
-    Run a one definite files:  npx playwright test testCase№.spec.js
+    Run a one definite files:  npx playwright test #name.spec.js
 
     Running tests in headed mode:  npx playwright test --headed
 
-    Run a one definite files in headed mode:  npx playwright test testCase№.spec.js --headed
+    Run a one definite files in headed mode:  npx playwright test #name.spec.js --headed
 
 ## Allure report
 
 
-    Open Allure Report: npm run allure:open
+    Open Allure Report: npx allure serve 
 
     Press <Ctrl+C> to exit from opened Allure Report
 
-##  Requirements
+## HTML report
 
-    Version: 1.73.1(user setup)
+    Open HTML Report: npx playwright show-report
 
-    Chromium: 102.0.5005.167
+## Line reporter
+
+    Line uses a single line to report the last finished test, and prints failures when they occur. Line reporter is useful for large test suites where it shows the progress but does not spam the output by listing all the tests. Its runs automatically during test running.
+
+##  Technologies
 
     Node.js: 16.14.2
-
-    OS: Windows_NTx64 10.0.19044
+    
 
 
 
