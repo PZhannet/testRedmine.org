@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
-const { OpenRedminePage } = require('./openRedmine.page');
-exports.EmailInputPage = class EmailInputPage extends OpenRedminePage {
+const { MainPage } = require('./mainPage.page');
+exports.EmailInputPage = class EmailInputPage extends MainPage {
   /**
    * @param {import('@playwright/test').Page} page
    */

@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
-const { OpenRedminePage } = require('./openRedmine.page');
-exports.CheckCategoryReports = class CheckCategoryReports extends OpenRedminePage  {
+const { MainPage } = require('./mainPage.page');
+exports.CheckCategoryReports = class CheckCategoryReports extends MainPage  {
   /**
    * @param {import('@playwright/test').Page} page
    */

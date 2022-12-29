@@ -1,5 +1,5 @@
-const { OpenRedminePage } = require('./openRedmine.page');
-exports.CheckSearchInputFocused = class CheckSearchInputFocused extends OpenRedminePage{
+const { MainPage } = require('./mainPage.page');
+exports.CheckSearchInputFocused = class CheckSearchInputFocused extends MainPage{
   /**
    * @param {import('@playwright/test').Page} page
    */
