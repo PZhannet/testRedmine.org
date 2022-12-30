@@ -1,4 +1,4 @@
-exports.MainPage = class MainPage {
+export class MainPage {
     
   constructor(page) {
     this.page = page;
@@ -6,10 +6,11 @@ exports.MainPage = class MainPage {
     this.searchLink = page.locator('[href$="/search"]');
     
   }
-   async goto() {
+  async goto() {
     await this.page.goto(this.url);
   }
   /*async clickSerchLink (){
     await this.searchLink.first().click();
   }*/
+
 }
