@@ -9,8 +9,4 @@ export class MainPage {
   async goto() {
     await this.page.goto(this.url);
   }
-  /*async clickSerchLink (){
-    await this.searchLink.first().click();
-  }*/
-
 }

@@ -13,11 +13,10 @@ exports.SearchPage = class SearchPage extends MainPage{
     this.gettingSearchLinkHeder = page.locator(('div>h2'));
   }
   async clickSearchLink() {
-    await this.goto();
-    //await this.clickSearchLink();
+    await this.goto()
     await this.searchLink.first().click();
     await expect(this.gettingSearchLinkHeder).toBeVisible();
-  }
+  }  
   async fillSearchInput(text){
     await this.serchInput.fill(text);
     await expect(this.serchInput).not.toBeEmpty();
